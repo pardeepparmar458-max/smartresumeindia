@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Create a professional resume for free with SmartResume India. Build, preview, and print your CV in Hindi or English.">
+  <title>SmartResume India — Free Resume Maker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="SmartResume India home">
+      <span class="brand-mark">SR</span>
+      <span>SmartResume <em>India</em></span>
+    </a>
+    <nav>
+      <a href="#builder" data-i18n="navBuilder">Resume Builder</a>
+      <a href="#templates" data-i18n="navTemplates">Templates</a>
+      <button id="languageToggle" class="btn btn-outline btn-small" type="button">हिंदी</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow" data-i18n="heroEyebrow">YOUR NEXT CHAPTER STARTS HERE</span>
+        <h1 data-i18n="heroTitle">A better resume.<br><span>A brighter future.</span></h1>
+        <p data-i18n="heroText">Create a polished, job-ready resume in minutes. Fill in your details, choose a design, then print or save as PDF.</p>
+        <a class="btn btn-primary" href="#builder" data-i18n="startBuilding">Start building free →</a>
+        <div class="trust-row"><span>✓ <span data-i18n="noSignup">No account required</span></span><span>✓ <span data-i18n="private">Your details stay in this browser</span></span></div>
+      </div>
+      <div class="hero-preview" aria-hidden="true">
+        <div class="floating-card">✦ ATS-friendly layouts</div>
+        <div class="mini-resume">
+          <div class="mini-sidebar"></div>
+          <div class="mini-content"><div class="mini-line long"></div><div class="mini-line short"></div><div class="mini-rule"></div><div class="mini-line medium"></div><div class="mini-line long"></div><div class="mini-line medium"></div><div class="mini-rule"></div><div class="mini-line long"></div><div class="mini-line short"></div></div>
+        </div>
+        <div class="floating-card bottom-card">PDF-ready · Simple · Clean</div>
+      </div>
+    </section>
+
+    <section class="builder-section" id="builder">
+      <div class="section-heading">
+        <div><span class="eyebrow" data-i18n="stepEyebrow">YOUR RESUME, YOUR WAY</span><h2 data-i18n="builderTitle">Build your resume</h2></div>
+        <p data-i18n="builderSub">Complete the fields below. Your preview updates as you type.</p>
+      </div>
+      <div class="workspace">
+        <aside class="editor panel">
+          <div class="editor-top"><h3 data-i18n="yourDetails">Your details</h3><button id="resetBtn" class="text-button" type="button" data-i18n="clearAll">Clear all</button></div>
+          <form id="resumeForm">
+            <div class="field-grid">
+              <label><span data-i18n="fullName">Full name</span><input id="fullName" name="fullName" value="Pradeep Parmar" placeholder="e.g. Priya Sharma"></label>
+              <label><span data-i18n="jobTitle">Target job title</span><input id="jobTitle" name="jobTitle" value="Customer Service Executive" placeholder="e.g. Accountant"></label>
+              <label><span data-i18n="email">Email</span><input id="email" name="email" type="email" placeholder="you@example.com"></label>
+              <label><span data-i18n="phone">Phone</span><input id="phone" name="phone" type="tel" placeholder="+91 98765 43210"></label>
+              <label class="full-field"><span data-i18n="location">City / Location</span><input id="location" name="location" placeholder="Jaipur, Rajasthan"></label>
+              <label class="full-field"><span data-i18n="summary">Professional summary</span><textarea id="summary" name="summary" rows="3" placeholder="Write 2–3 lines about your strengths and goals.">Motivated and dependable professional with strong communication skills, a willingness to learn, and a focus on delivering excellent service.</textarea></label>
+            </div>
+            <div class="form-divider"></div>
+            <label class="stacked"><span data-i18n="experience">Work experience</span><textarea id="experience" name="experience" rows="4" placeholder="Job title — Company&#10;2023–2025&#10;• Helped customers and maintained records">Customer Service Assistant — Example Company
+2023–2025
+• Assisted customers and maintained accurate records
+• Worked with the team to resolve daily queries</textarea><small data-i18n="lineTip">Tip: use a new line for each point.</small></label>
+            <div class="form-divider"></div>
+            <label class="stacked"><span data-i18n="education">Education</span><textarea id="education" name="education" rows="3" placeholder="Degree / Class — Institute&#10;Year">Bachelor's degree — Example College
+2022</textarea></label>
+            <div class="form-divider"></div>
+            <label class="stacked"><span data-i18n="skills">Skills</span><textarea id="skills" name="skills" rows="2" placeholder="Communication, MS Excel, teamwork">Communication, MS Excel, Teamwork, Time management</textarea><small data-i18n="skillsTip">Separate skills with commas.</small></label>
+            <div class="form-divider"></div>
+            <label class="stacked"><span data-i18n="languages">Languages</span><input id="languages" name="languages" value="Hindi, English" placeholder="Hindi, English"></label>
+          </form>
+          <div class="privacy-note"><span>🔒</span><p data-i18n="privacyNote">Your information stays on this device. This demo does not send your resume details to a server.</p></div>
+        </aside>
+
+        <section class="preview-column">
+          <div class="preview-toolbar panel">
+            <div><h3 data-i18n="livePreview">Live preview</h3><span class="live-status"><i></i><span data-i18n="updatesLive">Updates live</span></span></div>
+            <div class="toolbar-actions"><button id="printBtn" class="btn btn-primary" type="button">⬇ <span data-i18n="downloadPdf">Print / Save PDF</span></button></div>
+          </div>
+          <div class="template-picker panel" id="templates">
+            <div class="picker-heading"><h3 data-i18n="chooseTemplate">Choose a template</h3><span data-i18n="premiumNote">Premium designs are preview demos</span></div>
+            <div class="template-options">
+              <button type="button" class="template-option active" data-template="classic"><span class="template-thumb thumb-classic"><b></b><i></i><i></i><i></i></span><strong data-i18n="classic">Classic</strong><small data-i18n="free">FREE</small></button>
+              <button type="button" class="template-option" data-template="modern"><span class="template-thumb thumb-modern"><b></b><i></i><i></i><i></i></span><strong data-i18n="modern">Modern</strong><small data-i18n="free">FREE</small></button>
+              <button type="button" class="template-option" data-template="elegant"><span class="template-thumb thumb-elegant"><b></b><i></i><i></i><i></i></span><strong data-i18n="elegant">Elegant</strong><small class="premium-label" data-i18n="premium">PREMIUM</small></button>
+            </div>
+          </div>
+          <div class="paper-wrap">
+            <article id="resumePreview" class="resume-paper template-classic" aria-label="Resume preview">
+              <header class="resume-header">
+                <h1 id="previewName">Pradeep Parmar</h1><h2 id="previewJob">Customer Service Executive</h2>
+                <p class="contact-line" id="previewContact">Add your email · Add your phone · Add your location</p>
+              </header>
+              <section class="resume-block" id="summaryBlock"><h3 data-i18n="summaryHeading">PROFILE</h3><p id="previewSummary"></p></section>
+              <section class="resume-block" id="experienceBlock"><h3 data-i18n="experienceHeading">EXPERIENCE</h3><div id="previewExperience"></div></section>
+              <section class="resume-block" id="educationBlock"><h3 data-i18n="educationHeading">EDUCATION</h3><div id="previewEducation"></div></section>
+              <section class="resume-block" id="skillsBlock"><h3 data-i18n="skillsHeading">SKILLS</h3><p id="previewSkills"></p></section>
+              <section class="resume-block" id="languagesBlock"><h3 data-i18n="languagesHeading">LANGUAGES</h3><p id="previewLanguages"></p></section>
+            </article>
+          </div>
+          <p class="preview-help" data-i18n="printHelp">Tip: click “Print / Save PDF”, then choose “Save as PDF” in your browser’s print window.</p>
+        </section>
+      </div>
+    </section>
+
+    <section class="how-section">
+      <span class="eyebrow" data-i18n="simpleSteps">THREE SIMPLE STEPS</span><h2 data-i18n="howTitle">From details to download</h2>
+      <div class="steps-grid">
+        <article><span>01</span><h3 data-i18n="stepOne">Add your details</h3><p data-i18n="stepOneText">Enter your contact details, education, experience and skills.</p></article>
+        <article><span>02</span><h3 data-i18n="stepTwo">Pick a design</h3><p data-i18n="stepTwoText">Switch between clean, readable resume styles.</p></article>
+        <article><span>03</span><h3 data-i18n="stepThree">Save as PDF</h3><p data-i18n="stepThreeText">Print or save a PDF, ready to share with employers.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand" href="#"><span class="brand-mark">SR</span><span>SmartResume <em>India</em></span></a>
+    <div class="footer-links"><a href="about.html" data-i18n="about">About</a><a href="privacy.html" data-i18n="privacy">Privacy</a><a href="contact.html" data-i18n="contact">Contact</a></div>
+    <p>© <span id="year"></span> SmartResume India. <span data-i18n="footerNote">Built to help you take the next step.</span></p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
