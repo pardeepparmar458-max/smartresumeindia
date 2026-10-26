@@ -75,7 +75,14 @@
         <section class="preview-column">
           <div class="preview-toolbar panel">
             <div><h3 data-i18n="livePreview">Live preview</h3><span class="live-status"><i></i><span data-i18n="updatesLive">Updates live</span></span></div>
-            <div class="toolbar-actions"><button id="printBtn" class="btn btn-primary" type="button">⬇ <span data-i18n="downloadPdf">Print / Save PDF</span></button></div>
+            <div class="toolbar-actions"><button
+  id="printBtn"
+  class="btn btn-primary"
+  type="button"
+  onclick="window.print()"
+>
+  ⬇ <span data-i18n="downloadPdf">Print / Save PDF</span>
+</button>" class="btn btn-primary" type="button">⬇ <span data-i18n="downloadPdf">Print / Save PDF</span></button></div>
           </div>
           <div class="template-picker panel" id="templates">
             <div class="picker-heading"><h3 data-i18n="chooseTemplate">Choose a template</h3><span data-i18n="premiumNote">Premium designs are preview demos</span></div>
