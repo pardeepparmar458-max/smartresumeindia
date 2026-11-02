@@ -64,6 +64,14 @@
               <label><span data-i18n="jobTitle">Target job title</span><input id="jobTitle" name="jobTitle" value="Customer Service Executive" placeholder="e.g. Accountant"></label>
               <label><span data-i18n="email">Email</span><input id="email" name="email" type="email" placeholder="you@example.com"></label>
               <label><span data-i18n="phone">Phone</span><input id="phone" name="phone" type="tel" placeholder="+91 98765 43210"></label>
+             <label class="full-field">
+  <span>Profile Photo (Optional)</span>
+  <div class="photo-upload-row">
+    <input type="file" id="profilePhoto" accept="image/*">
+    <button type="button" id="removePhotoBtn">Remove Photo</button>
+  </div>
+  <small class="photo-help">Upload JPG or PNG, maximum 5 MB.</small>
+</label>
               <label class="full-field"><span data-i18n="location">City / Location</span><input id="location" name="location" placeholder="Jaipur, Rajasthan"></label>
               <label class="full-field"><span data-i18n="summary">Professional summary</span><textarea id="summary" name="summary" rows="3" placeholder="Write 2–3 lines about your strengths and goals.">Motivated and dependable professional with strong communication skills, a willingness to learn, and a focus on delivering excellent service.</textarea></label>
             </div>
@@ -103,6 +111,9 @@
           <div class="paper-wrap">
             <article id="resumePreview" class="resume-paper template-classic" aria-label="Resume preview">
               <header class="resume-header">
+                <div class="photo-frame" id="photoFrame" hidden>
+  <img id="previewPhoto" alt="Profile photo">
+</div>
                 <h1 id="previewName">Pradeep Parmar</h1><h2 id="previewJob">Customer Service Executive</h2>
                 <p class="contact-line" id="previewContact">Add your email · Add your phone · Add your location</p>
               </header>
